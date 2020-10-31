@@ -169,3 +169,8 @@ C:\Users\adzam\Documents\Work\dotnet\RazorPagesRoomReservations\bin\Debug\netcor
 C:\Users\adzam\Documents\Work\dotnet\RazorPagesRoomReservations\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\Users\adzam\Documents\Work\dotnet\RazorPagesRoomReservations\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\Users\adzam\Documents\Work\dotnet\RazorPagesRoomReservations\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\adzam\Documents\Work\dotnet\RazorPagesRoomReservations\obj\Debug\netcoreapp3.1\Razor\Pages\Rooms\Create.cshtml.g.cs
+C:\Users\adzam\Documents\Work\dotnet\RazorPagesRoomReservations\obj\Debug\netcoreapp3.1\Razor\Pages\Rooms\Delete.cshtml.g.cs
+C:\Users\adzam\Documents\Work\dotnet\RazorPagesRoomReservations\obj\Debug\netcoreapp3.1\Razor\Pages\Rooms\Details.cshtml.g.cs
+C:\Users\adzam\Documents\Work\dotnet\RazorPagesRoomReservations\obj\Debug\netcoreapp3.1\Razor\Pages\Rooms\Edit.cshtml.g.cs
+C:\Users\adzam\Documents\Work\dotnet\RazorPagesRoomReservations\obj\Debug\netcoreapp3.1\Razor\Pages\Rooms\Index.cshtml.g.cs
