@@ -10,6 +10,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using RazorPagesRoomReservations.Data;
 using Microsoft.EntityFrameworkCore;
+using RazorPagesRoomReservations.Services;
 
 namespace RazorPagesRoomReservations
 {
@@ -33,7 +34,9 @@ namespace RazorPagesRoomReservations
             options.UseSqlite(Configuration.GetConnectionString("RoomReservationsContext")));
             }
 
+
             services.AddRazorPages();
+            services.AddTransient<UploadFileService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
