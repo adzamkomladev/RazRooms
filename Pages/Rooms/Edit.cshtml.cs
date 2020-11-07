@@ -15,14 +15,9 @@ namespace RazorPagesRoomReservations.Pages.Rooms
 {
     public class EditModel : PageModel
     {
-        private readonly RazorPagesRoomReservationsContext _context;
-        private readonly UploadFileService _uploadFileService;
+        private readonly RoomService _roomService;
 
-        public EditModel(RazorPagesRoomReservationsContext context, UploadFileService uploadFileService)
-        {
-            _context = context;
-            _uploadFileService = uploadFileService;
-        }
+        public EditModel(RoomService roomService) => _roomService = roomService;
 
         [BindProperty]
         public Room Room { get; set; }
@@ -33,14 +28,11 @@ namespace RazorPagesRoomReservations.Pages.Rooms
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
-            if (id == null)
+            try
             {
-                return NotFound();
+                Room = await _roomService.FindOneByIdAsync(id);
             }
-
-            Room = await _context.Room.FirstOrDefaultAsync(m => m.ID == id);
-
-            if (Room == null)
+            catch (Exception)
             {
                 return NotFound();
             }
@@ -57,38 +49,13 @@ namespace RazorPagesRoomReservations.Pages.Rooms
                 return Page();
             }
 
-            var room = await _context.Room.Where(m => m.ID == Room.ID)
-                                          .Select(m => new Room { Image = m.Image })
-                                          .FirstOrDefaultAsync();
-
-            if (room == null)
-            {
-                return NotFound();
-            }
-
-            if (Image != null)
-            {
-                Room.Image = await _uploadFileService.UploadFileAsync(Image, "Images", "Rooms");
-            }
-            else
-            {
-                Room.Image = room.Image;
-            }
-
-            _context.Attach(Room).State = EntityState.Modified;
-
             try
             {
-                await _context.SaveChangesAsync();
-
-                if (Image != null && room.Image != null)
-                {
-                    _uploadFileService.DeleteFile(room.Image);
-                }
+                await _roomService.UpdateAsync(Room, Image);
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!RoomExists(Room.ID))
+                if (!_roomService.Exists(Room.ID))
                 {
                     return NotFound();
                 }
@@ -97,13 +64,12 @@ namespace RazorPagesRoomReservations.Pages.Rooms
                     throw;
                 }
             }
+            catch (Exception)
+            {
+                return NotFound();
+            }
 
             return RedirectToPage("./Index");
-        }
-
-        private bool RoomExists(int id)
-        {
-            return _context.Room.Any(e => e.ID == id);
         }
     }
 }
