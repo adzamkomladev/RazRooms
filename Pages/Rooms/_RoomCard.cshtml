@@ -1,0 +1,16 @@
+@model RazorPagesRoomReservations.Models.Room
+
+<a class="card-link" asp-page="./Details" asp-route-id="@Model.ID">
+    <div  class="room card">
+        <img class="card-img-top" src="~/@Model.Image" alt="Room @Model.Name Image">
+        <div class="card-body">
+            <h4 class="card-title">Room @Model.Name</h4>
+            <p class="card-text">
+                <strong><i class="fas fa-toolbox"></i> Condition:</strong> @Model.Condition 
+                <br>
+                @Model.Description
+            </p>
+        </div>
+    </div>
+</a>
+

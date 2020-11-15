@@ -14437,8 +14437,18 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\adzam\\Documents\\Work\\dotnet\\RazorPagesRoomReservations\\Pages\\Rooms\\_RoomCardStylesPartial.cshtml",
+      "TargetPath": "Pages\\Rooms\\_RoomCardStylesPartial.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\adzam\\Documents\\Work\\dotnet\\RazorPagesRoomReservations\\Pages\\_ViewImports.cshtml",
       "TargetPath": "Pages\\_ViewImports.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\adzam\\Documents\\Work\\dotnet\\RazorPagesRoomReservations\\Pages\\Rooms\\_RoomCard.cshtml",
+      "TargetPath": "Pages\\Rooms\\_RoomCard.cshtml",
       "FileKind": "mvc"
     },
     {

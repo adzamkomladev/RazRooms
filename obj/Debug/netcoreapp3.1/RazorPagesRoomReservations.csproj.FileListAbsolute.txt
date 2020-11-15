@@ -174,3 +174,5 @@ C:\Users\adzam\Documents\Work\dotnet\RazorPagesRoomReservations\obj\Debug\netcor
 C:\Users\adzam\Documents\Work\dotnet\RazorPagesRoomReservations\obj\Debug\netcoreapp3.1\Razor\Pages\Rooms\Details.cshtml.g.cs
 C:\Users\adzam\Documents\Work\dotnet\RazorPagesRoomReservations\obj\Debug\netcoreapp3.1\Razor\Pages\Rooms\Edit.cshtml.g.cs
 C:\Users\adzam\Documents\Work\dotnet\RazorPagesRoomReservations\obj\Debug\netcoreapp3.1\Razor\Pages\Rooms\Index.cshtml.g.cs
+C:\Users\adzam\Documents\Work\dotnet\RazorPagesRoomReservations\obj\Debug\netcoreapp3.1\Razor\Pages\Rooms\_RoomCard.cshtml.g.cs
+C:\Users\adzam\Documents\Work\dotnet\RazorPagesRoomReservations\obj\Debug\netcoreapp3.1\Razor\Pages\Rooms\_RoomCardStylesPartial.cshtml.g.cs
